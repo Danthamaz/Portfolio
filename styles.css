@@ -76,6 +76,7 @@
     article {
         background: #ffffff; /* White background color for article */
         padding: 10px 20px 20px 20px; /* Adds padding around content */
+        width: 100%;
     }
     /* styles for 'About Me' */
     article h1 {
@@ -100,6 +101,9 @@
     }
     .padding {
         padding: 25px 0px 0px 0px; /* Padding between break and content */
+    }
+    form {
+        width: 100%;
     }
     /* Changes photos based on screen size */
     .imageF  ull{
