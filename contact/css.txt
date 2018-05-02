@@ -1,0 +1,93 @@
+/* Initial CSS */
+ * {
+    box-sizing: border-box; /* Update all box sizing to border-box */
+ }
+ body {
+    font-family: Arial, Helvetica, sans-serif; /* Updates font to Arial first */
+    margin: 0; /* Removes default margins */
+ }
+/* Header Style */
+    header {
+        background: green; /* Green background */
+        color: white; /* White text */
+        text-align: center; /* Center text */
+        padding: 80px;/* padding around content */
+    }
+
+/* Navigation Bar Style */
+    nav {
+        overflow: hidden; /* Hides overflow */
+        background: gray; /* Changes background to gray */ 
+        margin: auto;
+        width: 70%; 
+    }
+    nav a {
+        float: left; /* Makes sure that the links stay side-by-side */
+        display: block; /* Changes the display to block to be responsive */
+        color: white; /* White text color */
+        text-align: center; /* Centers the text */
+        padding: 14px 20px; /* Adds padding around content */
+        text-decoration: none; /* Removes hyperlink underline */
+    }
+    /* Right aligned link */
+    nav a.right {
+        float: right; /* Floats a link to the right */
+    }
+    /* Change color on mouse over */
+    nav a:hover {
+        background: lightgray; /* Light gray background color */
+        color: black; /* Black text color */
+    }
+
+/* Content Style */
+    /* Column container */
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto; /* Margin is automatically calculated to center div */
+        width: 70%; /* Section will only take up 70% of the page */  
+        margin-bottom: 110px; /* To ensure content does not flow into footer */
+    }
+    /* Create two unequal colums that sit next to each other*/
+    /* Sidebar/left column */
+    aside {
+        flex: 30%; /* Sets width of sidebar */
+        background: orange; /* Orange background color */
+        padding: 20px; /* Adds padding around content */
+    }
+    /* Main column */
+    article {
+        flex: 70%; /* Sets width of main content */
+        background: purple; /* Purple background color */
+        padding: 20px; /* Adds padding around content */
+    }
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 700px) {
+        section { 
+            width: 100%; /* Makes the section take up entire page on small devices */
+            flex-direction: column;
+        }
+        nav {
+            width: 100%; /* Makes link bars stretch on small screens */
+        }
+    }
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+    @media screen and (max-width: 400px) {
+        nav a {
+            float: none;
+            width: 100%;
+        }
+    }
+
+/* Footer Style */
+    footer {
+        padding: 20px; /* Adds padding around content */
+        text-align: center; /* Centers text */
+        background: brown; /* Brown background */
+        position: fixed; /* Fixes the footer to a specified location */
+        left: 0;
+        bottom: 0; /* Specifies fixed locaiton, along with left 0; */
+        width: 100%; /* Allows footer to always be 100% of the width */  
+        max-height: 110px; /* Works with margin-bottom: 110px; on section */
+    }
