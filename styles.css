@@ -103,8 +103,20 @@
         padding: 25px 0px 0px 0px; /* Padding between break and content */
     }
     form {
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
         width: 100%;
     }
+    #submit {
+        display: block;
+        width: 75px;
+        background: #4aaaa5;
+        color: #ffffff;
+        padding: 5px 10px;
+    }
+
+
     /* Changes photos based on screen size */
     .imageF  ull{
         display:block;
