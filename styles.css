@@ -109,13 +109,16 @@
         overflow: auto;
         width: 100%;
     }
+    /* Submit Button */
     #submit {
         display: block;
-        width: 75px;
+        width: 20%;
+        height: 35px;
         background: #4aaaa5;
         color: #ffffff;
         padding: 5px 10px;
     }
+    /* Message form size */
     textarea {
         resize: none;
         height: 200px;
