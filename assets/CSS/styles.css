@@ -6,7 +6,7 @@
     font-family: Arial, Helvetica, sans-serif; /* Updates font to Arial first */
     color: #777777;
     margin: 0; /* Removes default margins */
-    background-image: url("textured_paper.png"); /* Background image */
+    background-image: url("../Images/textured_paper.png"); /* Background image */
  }
 
 /* Header Style */
@@ -149,6 +149,7 @@
 .responsive { /* makes photos shrink with webpage size */ 
     float: left;
     width: 33.31%;
+    position: relative;
 }
 
 .clearfix:after {
@@ -193,7 +194,7 @@
             width: 49.99999%;
             margin: 6px 0;
         }
-        footer p {
+        footer p { /* Footer text changes size & moves for mobile */
             position: relative;
             bottom: 8px;
             font-size: 60%;
