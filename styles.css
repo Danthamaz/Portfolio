@@ -10,14 +10,12 @@
  }
 
 /* Header Style */
-    header {    
-        
-    }
     header h1 {
         color: white; /* White text */
         background: #4aaaa5; /* Background for h1 text */
         margin-bottom: -1px; /* Brings text to bottom of header */
-        padding: 15px  30px; /* Padding around header (teal box) */
+        margin-left: 3px; /* Pushes header right to align with section */
+        padding: 15px 30px; /* Padding around header (teal box) */
         font-size: 130%; /* font size for my name */
     }
     .header {
@@ -26,7 +24,6 @@
         border-width: 0px 0px 2px 0px; /* Border line under header */
         border-color: #cccccc; /* Color of border */
         font-family: Georgia, 'Times New Roman', Times, serif; /* Changes font for headings */
-        
     }
     .nav {
         display: flex; /* I have no idea why but it worked */
@@ -55,7 +52,7 @@
         background: #cccccc; /* Light gray hover color */ 
     }
     header li {
-        display: inline-block; 
+        display: inline-block; /* Places links inline */
     }
 
 /* Content Style */
@@ -76,7 +73,7 @@
     article {
         background: #ffffff; /* White background color for article */
         padding: 10px 20px 20px 20px; /* Adds padding around content */
-        width: 100%;
+        width: 100%; /* Article is 100% of the width of it's parent */
     }
     /* styles for 'About Me' */
     article h1 {
@@ -98,6 +95,8 @@
     hr { /*designs for thematic break */
         height: 2px;
         color: #4aaaa5;
+        position: relative; 
+        z-index: 2; /* Makes borders for hover not cover line */
     }
     .padding {
         padding: 25px 0px 0px 0px; /* Padding between break and content */
@@ -113,7 +112,7 @@
     #submit {
         display: block;
         width: 20%;
-        height: 35px;
+        min-height: 35px;
         background: #4aaaa5;
         color: #ffffff;
         padding: 5px 10px;
@@ -134,6 +133,30 @@
     .imageMobile{
         display:none;
     }
+
+/* Portfolio Style */
+
+  
+.responsive:hover {  /* Style for hovering images */
+    opacity: 0.75; /* Image fades out from mouse hover */
+}
+
+.responsive img {
+    width: 100%;
+    padding: 15px; /* resets padding (previously modified by img) */
+}
+
+.responsive { /* makes photos shrink with webpage size */ 
+    float: left;
+    width: 33.31%;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 
 /* Responsive layout - when the screen is less than 700px wide, make things pretty */
     @media screen and (max-width: 1440px) {
@@ -166,13 +189,22 @@
         input {
             height: 50px;
         }
+        .responsive { /* Changes image order for Portfolio */
+            width: 49.99999%;
+            margin: 6px 0;
+        }
+        footer p {
+            position: relative;
+            bottom: 8px;
+            font-size: 60%;
+        }
     }
 
 
 
 /* Footer Style */
     footer {
-        padding: 20px; /* Adds padding around content */
+        padding: 10px; /* Adds padding around content */
         text-align: center; /* Centers text */
         background: #666666 ; /* Brown background */
         color: white; /* Text color */     
