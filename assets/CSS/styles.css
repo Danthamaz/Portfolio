@@ -126,14 +126,6 @@
         height: 30px;
     }
 
-    /* Changes photos based on screen size */
-    .imageF  ull{
-        display:block;
-    }
-    .imageMobile{
-        display:none;
-    }
-
 /* Portfolio Style */
 
   
@@ -158,6 +150,10 @@
     clear: both;
 }
 
+.centeredText {
+    text-align: center;
+}
+
 
 /* Responsive layout - when the screen is less than 700px wide, make things pretty */
     @media screen and (max-width: 1440px) {
@@ -172,14 +168,6 @@
         }
         header h1 {
             width: 60%;
-        }
-        /* Changes photos based on screen size */
-        .imageFull{
-            display:none;
-        }  
-        .imageMobile{
-            display:block;
-            width: 100%;   
         }
         body {
             font-size: 200%;
